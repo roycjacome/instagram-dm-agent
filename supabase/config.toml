@@ -1,0 +1,12 @@
+# Meta no manda JWT de Supabase: desactivar verificación para este endpoint.
+# La seguridad la da la firma X-Hub-Signature-256 (App Secret).
+[functions.ig-webhook]
+verify_jwt = false
+
+# El MCP se protege con el secreto en la URL (MCP_SECRET).
+[functions.rush-mcp]
+verify_jwt = false
+
+# La API se protege con API keys (PUBLISH_API_KEYS).
+[functions.rush-api]
+verify_jwt = false
